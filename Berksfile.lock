@@ -1,0 +1,29 @@
+DEPENDENCIES
+  chef-sugar
+  citadel
+    git: git://github.com/balanced-cookbooks/citadel.git
+    revision: 17acff9d14cfd2f8ebc83f08715692f644e30a28
+  line
+  openvpnas
+    path: .
+    metadata: true
+  python
+  yum
+
+GRAPH
+  build-essential (2.0.0)
+  chef-sugar (1.2.8)
+  citadel (1.0.2)
+  line (0.5.1)
+  openvpnas (0.1.0)
+    chef-sugar (>= 0.0.0)
+    citadel (>= 0.0.0)
+    line (>= 0.0.0)
+    python (>= 0.0.0)
+    yum (>= 0.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  yum (3.2.0)
+  yum-epel (0.3.6)
+    yum (~> 3.0)

@@ -1,0 +1,16 @@
+NumericLiterals:
+  Enabled: false
+WordArray:
+  Enabled: false
+AlignParameters:
+  Enabled: false
+Documentation:
+  Enabled: false
+Encoding:
+  Enabled: false
+LineLength:
+  Max: 120
+MethodLength:
+  Max: 20
+SignalException:
+  Enabled: false
