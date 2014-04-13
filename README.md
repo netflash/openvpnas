@@ -6,9 +6,12 @@ A Chef cookbook to install and do basic configuration OpenVPN Access Server.
 
 Includes support for:
 
-* Own company name
-* SSL certificate (optional)
-* Backup and restore to/from S3 (optional).
+* Company name via Chef attribute
+* Logo, png format base64 encoded set as a Chef attribute - `openssl base64 < path/to/file.png | tr -d '\n' | pbcopy`
+* Automatic daily backup of database (optional)
+* Restoration of backed up database on Chef run (optional)
+* SSL Certificate via https://github.com/balanced-cookbooks/citadel
+* IAM roles for storing secrets and backups in S3
 
 Designed (very loosly) for use in AWS.
 
