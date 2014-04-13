@@ -26,10 +26,6 @@ compile_time do
 
 end # end compile_time
 
-package 'postfix' do
-  action :remove
-end
-
 # logo
 file "#{node['openvpnas']['dir']}/logo.png" do
   content Base64.decode64(node['openvpnas']['logo'])
