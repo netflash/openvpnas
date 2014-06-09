@@ -21,7 +21,7 @@ compile_time do
 
   yum_package 'openvpn-as' do
     source "#{Chef::Config[:file_cache_path]}/openvpn-as.rpm"
-    action :install
+    action :upgrade
   end
 
 end # end compile_time
