@@ -1,4 +1,4 @@
-default['openvpnas']['url'] = 'http://swupdate.openvpn.org/as/openvpn-as-2.0.6-CentOS6.x86_64.rpm'
+default['openvpnas']['url'] = 'http://swupdate.openvpn.org/as/openvpn-as-2.0.8-CentOS6.x86_64.rpm'
 
 default['openvpnas']['dir'] = '/usr/local/openvpn_as/'
 
