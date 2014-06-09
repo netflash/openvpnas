@@ -1,5 +1,5 @@
 name 'openvpnas'
-version '0.1.4'
+version '0.1.5'
 description 'OpenVPN Access Server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 maintainer 'Robert Coleman'
