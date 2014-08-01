@@ -6,6 +6,7 @@ maintainer 'Robert Coleman'
 maintainer_email 'github@robert.net.nz'
 
 supports 'redhat'
+supports 'ubuntu'
 
 %w(yum chef-sugar line python citadel).each do |cookbook|
   depends cookbook

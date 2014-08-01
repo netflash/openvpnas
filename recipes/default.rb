@@ -1,30 +1,48 @@
 # need chef-sugar
 include_recipe 'chef-sugar::default'
 
-compile_time do
-  yum_repository 'epel' do
-    description 'Extra Packages for Enterprise Linux'
-    mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-6&arch=$basearch'
-    gpgkey 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6'
-    action :create
-  end
+if redhat?
+  compile_time do
+    yum_repository 'epel' do
+      description 'Extra Packages for Enterprise Linux'
+      mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-6&arch=$basearch'
+      gpgkey 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6'
+      action :create
+    end
 
-  # update openssl - CVE-2014-0160 https://rhn.redhat.com/errata/RHSA-2014-0376.html
-  package 'openssl' do
-    action :upgrade
-  end
+    # update openssl - CVE-2014-0160 https://rhn.redhat.com/errata/RHSA-2014-0376.html
+    package 'openssl' do
+      action :upgrade
+    end
 
-  remote_file "#{Chef::Config[:file_cache_path]}/openvpn-as.rpm" do
-    source node['openvpnas']['url']
-    action :create
-  end
+    remote_file "#{Chef::Config[:file_cache_path]}/openvpn-as.rpm" do
+      source node['openvpnas']['url']
+      action :create
+    end
 
-  yum_package 'openvpn-as' do
-    source "#{Chef::Config[:file_cache_path]}/openvpn-as.rpm"
-    action :upgrade
-  end
+    yum_package 'openvpn-as' do
+      source "#{Chef::Config[:file_cache_path]}/openvpn-as.rpm"
+      action :upgrade
+    end
+  end # end compile_time
+elsif ubuntu?
+  compile_time do
 
-end # end compile_time
+    package 'openssl' do
+      action :upgrade
+    end
+
+    remote_file "#{Chef::Config[:file_cache_path]}/openvpn-as.deb" do
+      source node['openvpnas']['url']
+      action :create
+    end
+
+    dpkg_package 'openvpn-as' do
+      source "#{Chef::Config[:file_cache_path]}/openvpn-as.deb"
+      action :install
+    end
+  end
+end
 
 # logo
 file "#{node['openvpnas']['dir']}/logo.png" do
