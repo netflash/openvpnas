@@ -1,8 +1,8 @@
 case node['platform_family']
 when 'debian'
-  default['openvpnas']['url'] = 'http://swupdate.openvpn.org/as/openvpn-as-2.0.10-Ubuntu12.amd_64.deb'
+  default['openvpnas']['url'] = 'http://swupdate.openvpn.org/as/openvpn-as-2.0.11-Ubuntu14.amd_64.deb'
 when 'rhel'
-  default['openvpnas']['url'] = 'http://swupdate.openvpn.org/as/openvpn-as-2.0.10-CentOS6.x86_64.rpm'
+  default['openvpnas']['url'] = 'http://swupdate.openvpn.org/as/openvpn-as-2.0.11-CentOS6.x86_64.rpm'
 end
 
 default['openvpnas']['dir'] = '/usr/local/openvpn_as'
