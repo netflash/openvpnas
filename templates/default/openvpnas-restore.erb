@@ -21,7 +21,7 @@ mkdir -p $RESTORE_DIR
 cd $RESTORE_DIR
 
 # download the latest backup
-RESTORE_NAME=`aws s3 ls s3://mybucket`
+RESTORE_NAME=$(/usr/local/bin/aws s3 ls s3://$RESTORE_BUCKET | grep -o 'openvpnas-backup[^\n]*' | tail -1)
 aws s3 cp s3://$RESTORE_BUCKET/$RESTORE_NAME.tar.gz openvpnas-backup.tar.gz
 
 # extract the backup to the temp dir
@@ -35,7 +35,7 @@ tar zxf openvpnas-backup.tar.gz .
 for DBNAME in *.db
 do
   echo "restoring $DBNAME"
-  $OPENVPNAS_DIR/scripts/sqlite3 <$DBNAME.dump $DBNAME
+  $OPENVPNAS_DIR/scripts/sqlite3 $OPENVPNAS_DIR/etc/db/$DBNAME < $DBNAME.dump
 done
 
 # start openvpnas
