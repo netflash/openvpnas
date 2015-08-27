@@ -2,7 +2,7 @@
 include_recipe 'chef-sugar::default'
 
 if redhat?
-  compile_time do
+  at_compile_time do
     yum_repository 'epel' do
       description 'Extra Packages for Enterprise Linux'
       mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-6&arch=$basearch'
@@ -26,7 +26,7 @@ if redhat?
     end
   end # end compile_time
 elsif ubuntu?
-  compile_time do
+  at_compile_time do
 
     package 'openssl' do
       action :upgrade
