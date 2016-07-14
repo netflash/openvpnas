@@ -4,6 +4,7 @@ description 'OpenVPN Access Server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 maintainer 'Robert Coleman'
 maintainer_email 'github@robert.net.nz'
+source_url 'https://github.com/rjocoleman/openvpnas'
 
 supports 'redhat'
 supports 'ubuntu'

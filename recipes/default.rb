@@ -2,7 +2,7 @@
 include_recipe 'chef-sugar::default'
 
 if redhat?
-  rhel_version = node['platform_version'].split(".")[0]
+  rhel_version = node['platform_version'].split('.')[0]
 
   at_compile_time do
     yum_repository 'epel' do
@@ -29,7 +29,6 @@ if redhat?
   end # end compile_time
 elsif ubuntu?
   at_compile_time do
-
     package 'openssl' do
       action :upgrade
     end
