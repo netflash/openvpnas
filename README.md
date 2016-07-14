@@ -21,7 +21,7 @@ Designed (very loosly) for use in AWS.
 Attributes listed with their default values:
 
 ```ruby
-default['openvpnas']['url'] = 'http://swupdate.openvpn.org/as/openvpn-as-2.0.6-CentOS6.x86_64.rpm'
+default['openvpnas']['url'] = 'http://swupdate.openvpn.org/as/openvpn-as-2.1.2-CentOS7.x86_64.rpm'
 default['openvpnas']['dir'] = '/usr/local/openvpn_as/'
 default['openvpnas']['company_name'] = ''
 default['openvpnas']['logo'] = ''
