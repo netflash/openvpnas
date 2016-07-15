@@ -1,0 +1,37 @@
+DEPENDENCIES
+  openvpnas
+    path: .
+    metadata: true
+
+GRAPH
+  apt (4.0.1)
+    compat_resource (>= 12.10)
+  build-essential (6.0.0)
+    compat_resource (>= 12.10)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  chef-sugar (3.3.0)
+  chef_handler (1.4.0)
+  citadel (1.1.0)
+  compat_resource (12.10.6)
+  line (0.6.3)
+  mingw (1.2.2)
+    compat_resource (>= 0.0.0)
+    seven_zip (>= 0.0.0)
+  openvpnas (0.1.6)
+    apt (>= 0.0.0)
+    chef-sugar (>= 0.0.0)
+    citadel (>= 0.0.0)
+    line (>= 0.0.0)
+    python (>= 0.0.0)
+    yum (>= 0.0.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  seven_zip (2.0.1)
+    windows (>= 1.2.2)
+  windows (1.44.1)
+    chef_handler (>= 0.0.0)
+  yum (3.11.0)
+  yum-epel (0.7.0)
+    yum (>= 3.6.3)

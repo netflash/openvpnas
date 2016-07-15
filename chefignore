@@ -70,6 +70,7 @@ Procfile
 # Berkshelf #
 #############
 cookbooks/*
+berks-cookbooks
 tmp
 
 # Cookbooks #
@@ -88,7 +89,9 @@ Strainerfile
 ###########
 .vagrant
 Vagrantfile
+vendor
 
 # Travis #
 ##########
 .travis.yml
+

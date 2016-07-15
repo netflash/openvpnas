@@ -1,0 +1,7 @@
+berks-cookbooks
+.DS_Store
+.rvmrc
+.kitchen
+.bundle
+.vagrant
+vendor
