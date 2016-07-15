@@ -51,3 +51,8 @@ default['citadel']['bucket'] = node['openvpnas']['backup']['bucket']
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Authors
+  * Robert Coleman (<github@robert.net.nz>) - https://github.com/rjocoleman
+  * Alex Romanov (<alex@romanov.ws>) - https://github.com/netflash
+
