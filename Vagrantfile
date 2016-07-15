@@ -14,14 +14,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = 'papertrail-remote-syslog-berkshelf'
 
   # Set the version of chef to install using the vagrant-omnibus plugin
-  config.omnibus.chef_version = :latest
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = 'Berkshelf-CentOS-6.3-x86_64-minimal'
+  config.vm.box = 'opscode-ubuntu-12.04'
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = 'https://dl.dropbox.com/u/31081437/Berkshelf-CentOS-6.3-x86_64-minimal.box'
 
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
@@ -43,13 +41,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider :virtualbox do |vb|
+   config.vm.provider :virtualbox do |vb|
   #   # Don't boot with headless mode
   #   vb.gui = true
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
-  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
-  # end
+     vb.memory = 2048
+     vb.cpus   = 2
+   end
   #
   # View the documentation for the provider you're using for more
   # information on available options.
@@ -59,7 +58,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Enabling the Berkshelf plugin. To enable this globally, add this configuration
   # option to your ~/.vagrant.d/Vagrantfile file
-  config.berkshelf.enabled = true
 
   # An array of symbols representing groups of cookbook described in the Vagrantfile
   # to exclusively install and copy to Vagrant's shelf.
@@ -69,17 +67,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # to skip installing and copying to Vagrant's shelf.
   # config.berkshelf.except = []
 
-  config.vm.provision :chef_solo do |chef|
-    chef.json = {
-      mysql: {
-        server_root_password: 'rootpass',
-        server_debian_password: 'debpass',
-        server_repl_password: 'replpass'
-      }
-    }
-
-    chef.run_list = [
-      'recipe[papertrail_remote_syslog::default]'
-    ]
-  end
 end
