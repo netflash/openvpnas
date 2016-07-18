@@ -1,6 +1,6 @@
 # OpenVPN Access Server Chef Cookbook
 
-[![Build Status](https://travis-ci.org/rjocoleman/openvpnas.svg?branch=master)](https://travis-ci.org/rjocoleman/openvpnas)
+[![Build Status](https://travis-ci.org/netflash/openvpnas.svg?branch=master)](https://travis-ci.org/netflash/openvpnas)
 
 A Chef cookbook to install and do basic configuration OpenVPN Access Server.
 
