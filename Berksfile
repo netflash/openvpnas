@@ -9,4 +9,4 @@ cookbook 'python'
 cookbook 'apt'
 
 cookbook 'citadel',
-  :github => 'balanced-cookbooks/citadel'
+  github: 'balanced-cookbooks/citadel'

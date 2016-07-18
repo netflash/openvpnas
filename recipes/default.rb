@@ -2,11 +2,13 @@
 include_recipe 'chef-sugar::default'
 
 if redhat?
+  rhel_version = node['platform_version'].split('.')[0]
+
   at_compile_time do
     yum_repository 'epel' do
       description 'Extra Packages for Enterprise Linux'
-      mirrorlist 'http://mirrors.fedoraproject.org/mirrorlist?repo=epel-6&arch=$basearch'
-      gpgkey 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6'
+      mirrorlist "http://mirrors.fedoraproject.org/mirrorlist?repo=epel-#{rhel_version}&arch=$basearch"
+      gpgkey "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-#{rhel_version}"
       action :create
     end
 
@@ -27,7 +29,6 @@ if redhat?
   end # end compile_time
 elsif ubuntu?
   at_compile_time do
-
     package 'openssl' do
       action :upgrade
     end
