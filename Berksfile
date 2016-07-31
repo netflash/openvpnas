@@ -8,5 +8,4 @@ cookbook 'line'
 cookbook 'python'
 cookbook 'apt'
 
-cookbook 'citadel',
-  github: 'balanced-cookbooks/citadel'
+cookbook 'citadel'
