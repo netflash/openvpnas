@@ -1,9 +1,12 @@
 language: ruby
 cache: bundler
-sudo: false
+sudo: true
 rvm:
 - 2.1.9
-script: bundle exec rspec
+before_script:
+- source <(curl -sL https://raw.githubusercontent.com/zuazo/kitchen-in-travis/0.5.0/scripts/start_docker.sh)
+script:
+- travis_retry bundle exec rake integration:docker
 addons:
     code_climate:
         repo_token: 021d9946a1dfea681f1eb04f0f20054c2d3952c58974cb0669a2c2c81889e6eb
