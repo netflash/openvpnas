@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'guard',            '~> 2.6'
 gem 'chefspec',         '>= 3.2'
