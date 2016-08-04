@@ -7,6 +7,9 @@ provisioner:
 platforms:
   - name: centos-6.7
   - name: centos-7.2
+    driver_config:
+      # https://registry.hub.docker.com/u/milcom/centos7-systemd/dockerfile/
+      image: milcom/centos7-systemd
   - name: ubuntu-12.04
   - name: ubuntu-14.04
   - name: ubuntu-16.04
