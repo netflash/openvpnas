@@ -11,8 +11,8 @@ describe 'openvpnas::default' do
     its(:stdout) { should match(/^SA tool.*$/) }
   end
 
-  # default port 443 should be listening
-  describe port(443) do
+  # default port 943 should be listening
+  describe port(943) do
     it { should be_listening.with('tcp') }
   end
 
