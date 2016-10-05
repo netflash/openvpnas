@@ -13,7 +13,7 @@ Includes support for:
 * SSL Certificate via https://github.com/balanced-cookbooks/citadel
 * IAM roles for storing secrets and backups in S3
 
-Designed (very loosly) for use in AWS.
+ Designed (very loosly) for use in AWS.
 
 
 # Attributes
@@ -55,4 +55,3 @@ default['citadel']['bucket'] = node['openvpnas']['backup']['bucket']
 ## Authors
   * Robert Coleman (<github@robert.net.nz>) - https://github.com/rjocoleman
   * Alex Romanov (<alex@romanov.ws>) - https://github.com/netflash
-
