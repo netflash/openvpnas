@@ -1,5 +1,6 @@
 # OpenVPN Access Server Chef Cookbook
 
+
 [![Build Status](https://travis-ci.org/netflash/openvpnas.svg?branch=master)](https://travis-ci.org/netflash/openvpnas)[![Code Climate](https://codeclimate.com/github/netflash/openvpnas/badges/gpa.svg)](https://codeclimate.com/github/netflash/openvpnas)[![Test Coverage](https://codeclimate.com/github/netflash/openvpnas/badges/coverage.svg)](https://codeclimate.com/github/netflash/openvpnas/coverage)[![Issue Count](https://codeclimate.com/github/netflash/openvpnas/badges/issue_count.svg)](https://codeclimate.com/github/netflash/openvpnas)
 
 A Chef cookbook to install and do basic configuration OpenVPN Access Server.
