@@ -5,7 +5,7 @@ metadata
 cookbook 'yum'
 cookbook 'chef-sugar', '~>3.0.1'
 cookbook 'line'
-cookbook 'python'
+cookbook 'poise-python'
 cookbook 'apt'
 
 cookbook 'citadel',

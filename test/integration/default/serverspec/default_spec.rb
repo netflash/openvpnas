@@ -17,7 +17,7 @@ describe 'openvpnas::default' do
   end
 
   # as.conf files should has company_name
-  describe file('/usr/local/openvpn_as/as.conf') do
+  describe file('/usr/local/openvpn_as/etc/as.conf') do
     it { should be_file }
     its(:content) { should match(/.*company_name.*/) }
   end
