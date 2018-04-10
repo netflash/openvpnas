@@ -1,6 +1,6 @@
-include_recipe 'python::default'
+python_runtime '2.7'
 
-python_pip 'awscli'
+python_package 'awscli'
 
 template '/usr/local/bin/openvpnas-restore' do
   source 'openvpnas-restore.erb'

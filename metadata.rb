@@ -8,6 +8,6 @@ maintainer_email 'github@robert.net.nz'
 supports 'redhat'
 supports 'ubuntu'
 
-%w(apt yum chef-sugar line python citadel).each do |cookbook|
+%w(apt yum chef-sugar line poise-python citadel).each do |cookbook|
   depends cookbook
 end

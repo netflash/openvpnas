@@ -55,7 +55,7 @@ file "#{node['openvpnas']['dir']}/logo.png" do
 end
 
 replace_or_add 'sa.company_name' do
-  path '/usr/local/openvpn_as/as.conf'
+  path '/usr/local/openvpn_as/etc/as.conf'
   pattern 'sa.company_name=*'
   line node['openvpnas']['company_name']
 
@@ -65,7 +65,7 @@ replace_or_add 'sa.company_name' do
 end
 
 replace_or_add 'sa.logo_image_file' do
-  path '/usr/local/openvpn_as/as.conf'
+  path '/usr/local/openvpn_as/etc/as.conf'
   pattern 'sa.logo_image_file=*'
   line "sa.logo_image_file=#{node['openvpnas']['dir']}/logo.png"
 
