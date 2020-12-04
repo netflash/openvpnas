@@ -17,7 +17,7 @@ GIT
       thor (~> 0.18)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     addressable (2.3.6)
     ast (1.1.0)
@@ -160,7 +160,7 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
-    rack (1.5.2)
+    rack (2.2.3)
     rainbow (2.0.0)
     rake (10.2.2)
     rb-fsevent (0.9.4)
